@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Notary</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <!--Main Content-->
+            <div class="col-md-8">
+                <img src="./image/NotoryLogowhiteMed.png" class="responsive">
+                <div class="card mb-4">
+                    <h2 class="card-header" id="fileName">Book Title</h2>
+                    <div class="card-body">
+                        <div class="displayBox scroll-box" id="fileContent">
+                            Select a book on the right
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="https://www.github.com/capu1890">Check out my Github</a>
+                    </div>
+                </div>
+            </div>
+            <!--Side Bar-->
+            <div class="col-md-4">
+                <!--Search widget-->
+                <div class="card my-4">
+                    <h5 class="card-header">Search</h5>
+                    <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="keyword" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button" onclick="performMark()">Search</button>
+                                </span>
+                            </div>
+                    </div>
+                    <div class="card-footer" id="searchstat">
+
+                    </div>
+                </div>
+                <!--Select a Book widget-->
+                <div class="card my-4">
+                    <h5 class="card-header">Select a Book</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#" 
+                                        onclick="loadBook('JekyllAndHyde.txt', 'Jekyll and Hyde')">
+                                        Jekyll and Hyde</a></li>
+                                    <li><a href="#" 
+                                        onclick="loadBook('AliceInWonderland.txt', 'Alice in Wonderland')">
+                                        Alice in Wonderland</a></li>
+                                    <li><a href="#" 
+                                        onclick="loadBook('LOTR.txt', 'Lord of the Rings')">
+                                        Lord of the Rings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Most Used Words-->
+                <div class="card my-4">
+                    <h5 class="card-header">Keywords</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0" id="mostUsed">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Least Used Words-->
+                <div class="card my-4">
+                    <h5 class="card-header">Least Keywords</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0" id="leastUsed">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <!--Document Stats-->
+        <div class="card my-4">
+            <h5 class="card-header">Document Stats</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="list-unstyled mb-0" id="docStats">
+                            <li id="docLength"></li>
+                            <li id="wordCount"></li>
+                            <li id="charCount"></li>
+                        </ul>
+                    </div>
+                </div>
+    </div>
+    <script id="template-ul-items" type="text/template">
+    <li>
+        {{val}}
+    </li>
+    </script>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

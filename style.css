@@ -1,0 +1,30 @@
+body {
+    background: #3b3f42;
+    background: -webkit-linear-gradient(to right, #d1d1d1, #394349);
+    background: linear-gradient(to right, #d1d1d1, #394349);
+    color: black;
+}
+
+.card-body
+
+.responsive {
+    max-width: 90%;
+    height: auto;
+    margin: 5px 0 5px 0; 
+}
+
+.img {
+    padding: 15px;
+}
+
+.displayBox {
+    width: 100%;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.scroll-box {
+    overflow-y: auto;
+    height: 500px;
+    float: left;
+    padding: 1rem;
+}
